@@ -6,6 +6,7 @@ function SMZDM() {
     this.packageName = 'com.smzdm.client.android'
 
     this.init = () => {
+        logd('初始化 --> ' + this.appName);
     }
 
     /**
@@ -19,23 +20,26 @@ function SMZDM() {
      * 执行任务
      */
     this.run = () => {
-        while (!has(text('我的'))) {
+        while (true) {
+            let selector = text('我的')
+            if (has(selector)) {
+                click(selector)
+                break
+            }
             logd('等待进入应用')
             sleep(1000)
         }
-        click(text('我的'))
         while (true) {
-            if (has(text('签到领奖'))) {
-                break
+            let selector = text('签到领奖')
+            if (has(selector)) {
+                click(selector)
             } else if (has(textMatch('已签\\d+天'))) {
                 toast('已签到 --> ' +
                     textMatch('已签\\d+天').getOneNodeInfo(100).text)
-                return
+                break
+            } else if (has(text('签到成功'))) {
+                break
             }
-            sleep(1000)
-        }
-        click(text('签到领奖'))
-        while (!has(text('签到成功'))) {
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)
