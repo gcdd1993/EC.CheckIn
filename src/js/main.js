@@ -1,19 +1,24 @@
+const apps = [smzdm, idlefish, gMap, bcs]
+
 function main() {
-    doSignIn(smzdm)
-    doSignIn(idlefish)
-    doSignIn(gMap)
-    doSignIn(bcs)
+    apps
+        .forEach(app => doSignIn(app))
+    toast('任务完成，共签到' + apps.length + "个应用")
 }
 
 function doSignIn(app) {
-    clearApps()
-    sleep(1000)
-    app.init()
-    app.runApp()
-    app.run()
-    sleep(1000)
-    home()
-    sleep(3000)
+    try {
+        clearApps()
+        sleep(1000)
+        app.init()
+        app.runApp()
+        app.run()
+        sleep(1000)
+        home()
+        sleep(3000)
+    } catch (ex) {
+        loge(ex.toString())
+    }
 }
 
 function clearApps() {

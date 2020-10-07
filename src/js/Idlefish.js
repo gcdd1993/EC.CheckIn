@@ -10,7 +10,6 @@ function Idlefish() {
      */
     this.init = () => {
         logd('初始化 --> ' + this.appName);
-        image.requestScreenCapture(10000, 0);
     }
 
     /**
@@ -40,9 +39,11 @@ function Idlefish() {
             }
             selector = text('签到领取')
             if (has(selector)) {
-                if (selector.getOneNodeInfo(500).clickable) {
-                    click(selector)
-                }
+                click(selector)
+                break
+            }
+            selector = text('签到领币')
+            if (has(selector)) {
                 break
             }
             logd('等待进入签到页')

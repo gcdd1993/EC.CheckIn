@@ -33,17 +33,18 @@ function SMZDM() {
             let selector = text('签到领奖')
             if (has(selector)) {
                 click(selector)
-            } else if (has(textMatch('已签\\d+天'))) {
+            }
+            if (has(textMatch('已签\\d+天'))) {
                 toast('已签到 --> ' +
                     textMatch('已签\\d+天').getOneNodeInfo(100).text)
                 break
-            } else if (has(text('签到成功'))) {
+            }
+            if (has(text('签到成功'))) {
                 break
             }
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)
-        toast(id('com.smzdm.client.android:id/tv_sub_title').getOneNodeInfo(100).text)
     }
 }
 
