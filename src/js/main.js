@@ -1,5 +1,6 @@
-// const apps = [smzdm, idlefish, gMap, bcs]
-const apps = [liteTaobao]
+// const apps = [bcs, cainiao, czb, gMap, haval, idlefish, smzdm]
+
+const apps = [haval]
 
 function main() {
     const successCount =
@@ -17,16 +18,16 @@ function doSignIn(app) {
     }
     try {
         clearApps()
-        sleep(1000)
+        sleep(random(1000, 2000))
         app.init()
         app.runApp()
         app.run()
-        sleep(1000)
+        sleep(random(1000, 2000))
         home()
-        sleep(3000)
+        sleep(random(3000, 5000))
         return true
     } catch (ex) {
-        loge(ex.toString())
+        loge(ex)
         return false
     }
 }
@@ -36,6 +37,7 @@ function doSignIn(app) {
  */
 function clearApps() {
     recentApps()
+    sleep(3000)
     while (true) {
         const selector = descMatch('.*双击清理全部任务')
         if (has(selector)) {

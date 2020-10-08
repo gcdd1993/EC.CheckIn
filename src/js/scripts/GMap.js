@@ -24,14 +24,21 @@ function GMap() {
             let selector = text('我的')
             if (has(selector)) {
                 click(selector)
+                break
             }
-            selector = text('每日签到')
+            logd('等待进入签到页面');
+            sleep(1000)
+        }
+        while (true) {
+            let selector = text('每日签到')
             if (has(selector)) {
                 click(selector)
             }
-            if (has(text('签到战绩'))) {
+            selector = text('签到战绩')
+            if (has(selector)) {
                 break
             }
+            logd('等待签到结果');
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)

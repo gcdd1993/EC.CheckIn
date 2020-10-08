@@ -24,8 +24,18 @@ function Cainiao() {
             let selector = text('我的')
             if (has(selector)) {
                 click(selector)
+                break
             }
-            selector = text('裹酱积分')
+            // 好评弹窗
+            selector = text('取消')
+            if (has(selector)) {
+                click(selector)
+            }
+            logd('等待进入签到页面');
+            sleep(1000)
+        }
+        while (true) {
+            let selector = text('裹酱积分')
             if (has(selector)) {
                 click(selector)
             }
@@ -45,11 +55,7 @@ function Cainiao() {
                 toast('好像已经签到过了')
                 break
             }
-            // 好评弹窗
-            selector = text('取消')
-            if (has(selector)) {
-                click(selector)
-            }
+            logd('等待签到结果');
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)

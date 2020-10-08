@@ -24,13 +24,18 @@ function Idlefish() {
      */
     this.run = () => {
         while (true) {
-            let selector = text('闲鱼')
+            let selector = text('我的')
             if (has(selector)) {
                 click(selector)
+                break
             }
-            selector = text('闲鱼币')
+            logd('等待进入签到页面');
+            sleep(1000)
+        }
+        while (true) {
+            let selector = text('闲鱼币')
             if (has(selector)) {
-                clickPoint(985, 144)
+                click(selector)
             }
             selector = desc('闲鱼签到')
             if (has(selector)) {
@@ -45,6 +50,7 @@ function Idlefish() {
             if (has(selector)) {
                 break
             }
+            logd('等待签到结果');
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)

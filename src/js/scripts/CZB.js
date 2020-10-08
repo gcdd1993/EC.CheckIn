@@ -65,7 +65,7 @@ function _cmpColor_ad1() {
  */
 function _cmpColor_checkIn() {
     const points = '417|1378|0xFF8346-0x101010,447|1391|0xFFFFFF-0x101010,496|1412|0xFFFFFF-0x101010,535|1448|0xFF592F-0x101010'
-    return image.cmpColorEx(points, 0.9, 168, 1292, 766, 229);
+    return image.cmpColorEx(points, 0.9, 0, 0, 0, 0);
 }
 
 /**
@@ -75,7 +75,7 @@ function _cmpColor_checkIn() {
  */
 function _cmpColor_alwaysCheckIn() {
     const points = '470|1380|0xC5C5C5-0x101010,495|1407|0xFFFFFF-0x101010,544|1408|0xFFFFFF-0x101010,565|1433|0xC5C5C5-0x101010'
-    return image.cmpColorEx(points, 0.9, 168, 1292, 766, 229);
+    return image.cmpColorEx(points, 0.9, 0, 0, 0, 0);
 }
 
 const czb = new CZB()
