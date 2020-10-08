@@ -27,6 +27,15 @@ function Idlefish() {
             let selector = text('我的')
             if (has(selector)) {
                 click(selector)
+            }
+            selector = text('闲鱼币')
+                .clickable(true)
+            if (has(selector)) {
+                click(selector)
+            }
+            selector = text('闲鱼币')
+                .clickable(false)
+            if (has(selector)) {
                 break
             }
             logd('等待进入签到页面');
@@ -34,8 +43,9 @@ function Idlefish() {
         }
         while (true) {
             let selector = text('闲鱼币')
+                .clickable(false)
             if (has(selector)) {
-                click(selector)
+                clickPoint(973, 136)
             }
             selector = desc('闲鱼签到')
             if (has(selector)) {
@@ -48,6 +58,7 @@ function Idlefish() {
             }
             selector = text('签到领币')
             if (has(selector)) {
+                click(selector)
                 break
             }
             logd('等待签到结果');

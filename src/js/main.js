@@ -1,6 +1,6 @@
 // const apps = [bcs, cainiao, czb, gMap, haval, idlefish, smzdm]
 
-const apps = [haval]
+const apps = [idlefish]
 
 function main() {
     const successCount =
