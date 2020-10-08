@@ -45,6 +45,11 @@ function Cainiao() {
                 toast('好像已经签到过了')
                 break
             }
+            // 好评弹窗
+            selector = text('取消')
+            if (has(selector)) {
+                click(selector)
+            }
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)
