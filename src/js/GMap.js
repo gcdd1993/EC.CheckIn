@@ -29,13 +29,17 @@ function GMap() {
             sleep(1000)
         }
         while (true) {
-            if (has(text('每日签到'))) {
-                click(text('每日签到'))
+            let selector = text('每日签到')
+            if (has(selector)) {
+                click(selector)
                 break
             }
             sleep(1000)
         }
-        while (!has(text('签到战绩'))) {
+        while (true) {
+            if (has(text('签到战绩'))) {
+                break
+            }
             sleep(1000)
         }
         toast('签到成功 --> ' + this.appName)

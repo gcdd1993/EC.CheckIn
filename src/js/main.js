@@ -1,4 +1,5 @@
-const apps = [smzdm, idlefish, gMap, bcs]
+// const apps = [smzdm, idlefish, gMap, bcs]
+const apps = [haval]
 
 function main() {
     apps
