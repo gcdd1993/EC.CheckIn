@@ -23,13 +23,12 @@ function Idlefish() {
      * 执行任务
      */
     this.run = () => {
-        while (!has(text('闲鱼'))) {
-            logd('等待进入应用')
-            sleep(1000)
-        }
-        click(text('闲鱼'))
         while (true) {
-            let selector = text('闲鱼币')
+            let selector = text('闲鱼')
+            if (has(selector)) {
+                click(selector)
+            }
+            selector = text('闲鱼币')
             if (has(selector)) {
                 clickPoint(985, 144)
             }
@@ -46,10 +45,8 @@ function Idlefish() {
             if (has(selector)) {
                 break
             }
-            logd('等待进入签到页')
             sleep(1000)
         }
-        // _clickSignIn()
         toast('签到成功 --> ' + this.appName)
     }
 }

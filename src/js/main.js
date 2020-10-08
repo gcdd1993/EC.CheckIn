@@ -1,5 +1,5 @@
 // const apps = [smzdm, idlefish, gMap, bcs]
-const apps = [haval]
+const apps = [czb]
 
 function main() {
     apps

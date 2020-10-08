@@ -21,19 +21,18 @@ function BCS() {
      */
     this.run = () => {
         while (true) {
-            if (has(text('我的'))) {
-                click(text('我的'))
+            let selector = text('我的')
+            if (has(selector)) {
+                click(selector)
+            }
+            selector = text('签到')
+            if (has(selector)) {
+                click(selector)
                 break
             }
-            logd('等待进入应用')
-            sleep(1000)
-        }
-        while (true) {
-            if (has(text('签到'))) {
-                click(text('签到'))
-                break
-            }
-            if (has(text('已签到'))) {
+            selector = text('已签到')
+            if (has(selector)) {
+                toast('已签到')
                 break
             }
             sleep(1000)

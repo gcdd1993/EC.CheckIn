@@ -21,15 +21,11 @@ function Haval() {
      */
     this.run = () => {
         while (true) {
-            if (has(text('我的'))) {
-                click(text('我的'))
-                break
+            let selector = has(text('我的'))
+            if (selector) {
+                click(selector)
             }
-            logd('等待进入应用')
-            sleep(1000)
-        }
-        while (true) {
-            let selector = text('去签到')
+            selector = text('去签到')
             if (has(selector)) {
                 click(selector)
             }

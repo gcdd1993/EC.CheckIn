@@ -21,22 +21,14 @@ function GMap() {
      */
     this.run = () => {
         while (true) {
-            if (has(text('我的'))) {
-                click(text('我的'))
-                break
-            }
-            logd('等待进入应用')
-            sleep(1000)
-        }
-        while (true) {
-            let selector = text('每日签到')
+            let selector = text('我的')
             if (has(selector)) {
                 click(selector)
-                break
             }
-            sleep(1000)
-        }
-        while (true) {
+            selector = text('每日签到')
+            if (has(selector)) {
+                click(selector)
+            }
             if (has(text('签到战绩'))) {
                 break
             }
