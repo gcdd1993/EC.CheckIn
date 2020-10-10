@@ -2,6 +2,7 @@
  * 高德地图签到
  */
 function GMap() {
+    this.taskName = 'GMap'
     this.appName = '高德地图'
     this.packageName = 'com.autonavi.minimap'
 

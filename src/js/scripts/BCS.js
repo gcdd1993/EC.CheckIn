@@ -2,6 +2,7 @@
  * 编程狮签到
  */
 function BCS() {
+    this.taskName = 'BCS'
     this.appName = '编程狮'
     this.packageName = 'cn.w3cschool.app'
 

@@ -2,6 +2,7 @@
  * 哈弗智家签到
  */
 function Haval() {
+    this.taskName = 'Haval'
     this.appName = '哈弗智家'
     this.packageName = 'com.navinfo.gw'
 

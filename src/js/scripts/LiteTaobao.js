@@ -2,6 +2,7 @@
  * 淘宝特价版签到
  */
 function LiteTaobao() {
+    this.taskName = 'LiteTaobao'
     this.appName = '淘宝特价版'
     this.packageName = 'com.taobao.litetao'
 

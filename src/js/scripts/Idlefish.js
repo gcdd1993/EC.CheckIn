@@ -2,6 +2,7 @@
  * 闲鱼签到
  */
 function Idlefish() {
+    this.taskName = 'Idlefish'
     this.appName = '闲鱼'
     this.packageName = 'com.taobao.idlefish'
 

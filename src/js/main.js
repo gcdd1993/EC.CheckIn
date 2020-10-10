@@ -1,6 +1,6 @@
-// const apps = [bcs, cainiao, czb, gMap, haval, idlefish, smzdm]
+const apps = [bcs, cainiao, czb, gMap, haval, idlefish, smzdm]
 
-const apps = [idlefish]
+// const apps = [idlefish]
 
 function main() {
     const successCount =
@@ -13,6 +13,12 @@ function main() {
 function doSignIn(app) {
     if (!checkAppExists(app.packageName)) {
         toast('您未安装 --> ' + app.appName)
+        sleep(3000)
+        return false
+    }
+    const config = ui.getConfig(app.taskName)
+    if (config.toString() == 'false') {
+        toast('您未勾选' + app.appName + '，即将跳过')
         sleep(3000)
         return false
     }

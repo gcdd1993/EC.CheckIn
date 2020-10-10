@@ -2,6 +2,7 @@
  * 菜鸟裹裹签到
  */
 function Cainiao() {
+    this.taskName = 'Cainiao'
     this.appName = '菜鸟裹裹'
     this.packageName = 'com.cainiao.wireless'
 

@@ -2,6 +2,7 @@
  * 什么值得买签到
  */
 function SMZDM() {
+    this.taskName = 'SMZDM'
     this.appName = '什么值得买'
     this.packageName = 'com.smzdm.client.android'
 

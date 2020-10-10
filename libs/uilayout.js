@@ -262,7 +262,7 @@ UIWrapper.prototype.getConfigJSON = function () {
 /**
  * 取得单个UI配置项
  * @param key 配置的key
- * @return 字符串
+ * @return string
  */
 UIWrapper.prototype.getConfig = function (key) {
     if (uiWrapper == null) {

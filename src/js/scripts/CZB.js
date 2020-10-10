@@ -2,6 +2,7 @@
  * 团油签到
  */
 function CZB() {
+    this.taskName = 'CZB'
     this.appName = '团油'
     this.packageName = 'com.czb.chezhubang'
 

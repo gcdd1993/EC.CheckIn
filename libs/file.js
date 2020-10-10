@@ -191,3 +191,17 @@ FileWrapper.prototype.exists = function (path) {
     }
     return fileWrapper.exists(path);
 };
+
+/**
+ * 复制文件
+ *
+ * @param src 源文件路径
+ * @param dest 目标文件路径
+ * @return 布尔型 true 代表成功
+ */
+FileWrapper.prototype.copy = function (src,dest) {
+    if (fileWrapper == null) {
+        return null;
+    }
+    return fileWrapper.copy(src,dest);
+};
