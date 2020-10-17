@@ -88,6 +88,15 @@
                 android:gravity="center"
                 android:checked="true"
       />
+      <CheckBox android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:tag="JDJR"
+                android:text="京东金融"
+                android:textColor="#669999"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:checked="true"
+      />
     </LinearLayout>
     <LinearLayout
       android:layout_height="match_parent"

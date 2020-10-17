@@ -7,6 +7,7 @@ const apps = [
   idlefish,
   smzdm,
   renRen,
+  jdjr,
 ]
 
 function main() {
