@@ -39,6 +39,15 @@ function Idlefish() {
             if (has(selector)) {
                 break
             }
+            // 有时，会自动弹出签到弹窗
+            selector = text('签到领取')
+            if (has(selector)) {
+                break
+            }
+            selector = text('签到领币')
+            if (has(selector)) {
+                break
+            }
             logd('等待进入签到页面');
             sleep(1000)
         }
