@@ -75,6 +75,7 @@ function uninit() {
     device.cancelKeepingAwake();
 }
 
+// unlock()
 init()
 main()
 uninit()

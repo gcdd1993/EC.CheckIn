@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ScrollView
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xsi:noNamespaceSchemaLocation="layout.xsd"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+>
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+    >
+        <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+        >
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="设置每天："
+                      android:textColor="#669999"
+            />
+            <Spinner android:layout_height="wrap_parent"
+                     android:layout_width="wrap_content"
+                     android:tag="time"
+                     android:text="0|1|2|3|4|5|6|7|8"
+                     android:textColor="#669999"
+                     android:gravity="center"
+            />
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="match_parent"
+                      android:text="点运行"
+                      android:textColor="#669999"
+            />
+            <Switch android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:tag="timer"
+                    android:textColor="#669999"
+                    android:textSize="14dp"
+                    android:layout_gravity="right"
+                    android:checked="false"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
