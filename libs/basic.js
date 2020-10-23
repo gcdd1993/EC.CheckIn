@@ -14,22 +14,6 @@ Console.prototype.log = function (msg) {
 var console = new Console();
 
 /**
- * 载入EC自带的模块
- * @param libName 模块名称
- * @return {*}
- */
-function loadECModule(libName) {
-    var n = libName + "Wrapper";
-    if (modules[n]) {
-        //logd("已载入..." + n);
-        return;
-    }
-    var r = ecImporter.loadECModule(libName);
-    modules[n] = r;
-    return r;
-}
-
-/**
  * 休眠
  * @param miSecond 毫秒
  */

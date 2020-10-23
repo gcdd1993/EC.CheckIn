@@ -632,7 +632,16 @@ UIWrapper.prototype.customDialog = function (params, view, onViewBind, dismissLi
     return uiWrapper.customDialog(params, view, onViewBind, dismissListener);
 };
 
-
-
+/**
+ * 在主线程进行运行函数，相当于 getHandler.post
+ * @param delayTime 延迟时间，单位毫秒，如果是0就是理解执行
+ * @param callback 回调
+ */
+UIWrapper.prototype.run = function (delayTime, callback) {
+    if (uiWrapper == null) {
+        return;
+    }
+    return uiWrapper.run(delayTime, callback);
+};
 
 
