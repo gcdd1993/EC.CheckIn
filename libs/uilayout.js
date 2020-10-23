@@ -262,7 +262,7 @@ UIWrapper.prototype.getConfigJSON = function () {
 /**
  * 取得单个UI配置项
  * @param key 配置的key
- * @return string
+ * @return 字符串
  */
 UIWrapper.prototype.getConfig = function (key) {
     if (uiWrapper == null) {
@@ -632,7 +632,16 @@ UIWrapper.prototype.customDialog = function (params, view, onViewBind, dismissLi
     return uiWrapper.customDialog(params, view, onViewBind, dismissListener);
 };
 
-
-
+/**
+ * 在主线程进行运行函数，相当于 getHandler.post
+ * @param delayTime 延迟时间，单位毫秒，如果是0就是理解执行
+ * @param callback 回调
+ */
+UIWrapper.prototype.run = function (delayTime, callback) {
+    if (uiWrapper == null) {
+        return;
+    }
+    return uiWrapper.run(delayTime, callback);
+};
 
 

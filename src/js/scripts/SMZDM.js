@@ -27,13 +27,20 @@ function SMZDM() {
         click(selector)
         break
       }
+      closeAD()
       logd('等待进入签到页面');
       sleep(1000)
     }
     while (true) {
+      closeAD()
       let selector = text('签到领奖')
       if (has(selector)) {
         click(selector)
+      }
+      selector = text('点击获得额外奖励')
+      if(has(selector)) {
+        click(selector)
+        break
       }
       selector = textMatch('已签\\d+天')
       if (has(selector)) {
@@ -47,6 +54,13 @@ function SMZDM() {
       sleep(1000)
     }
     toast('签到成功 --> ' + this.appName)
+  }
+}
+
+const closeAD = () => {
+  let selector = id('com.smzdm.client.android:id/dialog_home_ads_close')
+  if (has(selector)) {
+    click(selector)
   }
 }
 
