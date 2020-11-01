@@ -25,18 +25,10 @@ function Idlefish() {
    */
   this.run = () => {
     while (true) {
-      let selector = text('我的')
-      if (has(selector)) {
-        click(selector)
-      }
-      selector = text('闲鱼币')
+      let selector = desc('闲鱼签到')
         .clickable(true)
       if (has(selector)) {
         click(selector)
-      }
-      selector = text('闲鱼币')
-        .clickable(false)
-      if (has(selector)) {
         break
       }
       // 有时，会自动弹出签到弹窗

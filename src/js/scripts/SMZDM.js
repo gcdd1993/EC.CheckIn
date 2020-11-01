@@ -38,7 +38,7 @@ function SMZDM() {
         click(selector)
       }
       selector = text('点击获得额外奖励')
-      if(has(selector)) {
+      if (has(selector)) {
         click(selector)
         break
       }
@@ -47,8 +47,17 @@ function SMZDM() {
         toast('已签到 --> ' + selector.getOneNodeInfo(100).text)
         break
       }
-      if (has(text('签到成功'))) {
+      selector = text('签到成功')
+      if (has(selector)) {
         break
+      }
+      selector = text('已连续签到')
+      if (has(selector)) {
+        break
+      }
+      selector = text('已成功领取红包');
+      if (has(selector)) {
+        clickPoint(541, 1622)
       }
       logd('等待签到结果');
       sleep(1000)
